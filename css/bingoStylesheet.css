@@ -1,0 +1,139 @@
+table {
+    border-collapse: collapse;
+}
+
+div {
+    display: block;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+table,
+th,
+td {
+    text-align: center;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+.cell {
+    border: 1px solid black;
+    padding: 32px 32px 32px 32px;
+    font-size: 3em;
+}
+
+#logoCell {
+    font-family: overwatch;
+    padding: 35px 25px 30px 25px;
+}
+
+#bingoLogo {
+    font-size: 45px;
+    text-align: center;
+    margin: auto;
+    border-bottom: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+#cardContainer {
+    margin: auto;
+    font-family: overwatch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#bingoCard {
+    border: 1px solid black;
+}
+
+#freeSpace {
+    background-color: black;
+}
+
+img {
+    height: 15%;
+    width: 25%;
+}
+
+#banner {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#rerollButton {
+    margin:auto;
+    display: block;
+}
+
+td:hover {
+    background-color:#dcdcdc;
+}
+
+@font-face {
+    font-family: overwatch;
+    src: url(https://us.battle.net/forums/static/fonts/f014015d/f014015d.woff);
+  }
+
+@font-face {
+    font-family: overwatch-italic;
+    src: url(https://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff);
+  }
+
+  * {
+    cursor: url(https://cdn.discordapp.com/attachments/303406782104207362/315839175406649345/Overwatch.cur), auto;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+    .italic {
+    position: relative;
+    text-align: center;
+    padding-top: 1%;
+    font-family: overwatch-italic;
+    font-size: 63px;
+    color: #fff;
+    text-shadow: 0px 0px 3px #cecece;
+    transform-origin: bottom;
+    transition: all .05s ease-in;
+  }
+
+  .italic.highlight {
+    color:#ee4bb5;
+    text-shadow: 0px 0px 5px #feabe6;
+  }
+
+  .normal {
+    position: relative;
+    left: 0;
+    line-height: 1.7;
+    font-family: overwatch;
+    font-size: 24px;
+    color: #e3f2ff;
+    text-shadow: 0 0 2px #336cec;
+    transform-origin: bottom;
+    transition: all .05s ease-in;
+  }
+  
+  .normal:hover {
+    left: 6px;
+    transform: scaleY(1.1);
+    color: #fff;
+  }
+
+#menu-highlight {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
