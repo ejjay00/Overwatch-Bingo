@@ -14,6 +14,7 @@
 </div>
 
 <div id="cardContainer">
+    <canvas id="daubers" width="606" height="700"></canvas>
     <table id="bingoCard">
         <tbody>
         <tr id="bingoLogo">
@@ -24,39 +25,39 @@
             <th id="logoCell">O</th>
         </tr>
         <tr id="row1">
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
+            <td class="cell" id="1">&nbsp;</td>
+            <td class="cell" id="2">&nbsp;</td>
+            <td class="cell" id="3">&nbsp;</td>
+            <td class="cell" id="4">&nbsp;</td>
+            <td class="cell" id="5">&nbsp;</td>
         </tr>
         <tr id="row2">
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
+            <td class="cell" id="6">&nbsp;</td>
+            <td class="cell" id="7">&nbsp;</td>
+            <td class="cell" id="8">&nbsp;</td>
+            <td class="cell" id="9">&nbsp;</td>
+            <td class="cell" id="10">&nbsp;</td>
         </tr>
         <tr id="row3">
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
+            <td class="cell" id="11">&nbsp;</td>
+            <td class="cell" id="12">&nbsp;</td>
             <td id="freeSpace"><img src="img/overwatchFreeSpace.png" alt="FREE" style="height: 80px; width: 80px;"></td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
+            <td class="cell" id="13">&nbsp;</td>
+            <td class="cell" id="14">&nbsp;</td>
         </tr>
         <tr id="row4">
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
+            <td class="cell" id="15">&nbsp;</td>
+            <td class="cell" id="16">&nbsp;</td>
+            <td class="cell" id="17">&nbsp;</td>
+            <td class="cell" id="18">&nbsp;</td>
+            <td class="cell" id="19">&nbsp;</td>
         </tr>
         <tr id="row5">
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
-            <td class="cell">&nbsp;</td>
+            <td class="cell" id="20">&nbsp;</td>
+            <td class="cell" id="21">&nbsp;</td>
+            <td class="cell" id="22">&nbsp;</td>
+            <td class="cell" id="23">&nbsp;</td>
+            <td class="cell" id="24">&nbsp;</td>
         </tr>
     </tbody>
     </table>
@@ -64,12 +65,14 @@
 
 <div id="rerollButton">
     <canvas id="menu-highlight" width="400" height="200"></canvas>
-    <div class="italic highlight" onmouseover="highlight(this, event)">
+    <button class="italic highlight" id="cardBtn" onmouseover="highlight(this, event)"
+     onclick="window.location.reload()">
       New Card?
-    </div>
+    </button>
 </div>
 
-<script type="text/javascript" src="js/bingoJS.js"></script>
+<script type="text/javascript" src="js/particleEffectMouseHover.js"></script>
+<script type="text/javascript" src="js/daubersScript.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,9 @@
 $(document).ready(function() {
+    randomizeNumbers();
+});
 
-    // Array to hold random numbers to populate the bingo cells
+function randomizeNumbers() {
+// Array to hold random numbers to populate the bingo cells
 var randNums = [];
 
 // Grabbing 25 unique numbers and stores them into the randNums array
@@ -18,4 +21,4 @@ $(".cell").each(function(i, td) {
     $(this).text(randNums[i]);
     console.log(td);
 });
-});
+}

@@ -1,6 +1,6 @@
 
 // Alert box for switching Daubers, can probably use something else later.
-alert("Press H to switch Hero Daubers.");
+// alert("Press H to switch Hero Daubers.");
 
 window.canvas = document.getElementById('menu-highlight');
 window.ctx = canvas.getContext('2d');
