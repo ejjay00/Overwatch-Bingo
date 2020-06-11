@@ -53,6 +53,7 @@ tr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 #cardBtn {
@@ -152,6 +153,9 @@ td:hover {
 
 #menu-highlight {
   position: absolute;
-  left: 1000;
-  top: 0;
+}
+
+.daub {
+  z-index: 5;
+  position: absolute;
 }

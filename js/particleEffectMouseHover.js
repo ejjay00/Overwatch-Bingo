@@ -84,8 +84,6 @@ function drawHiglight() {
     isHighlightActive = true;
     requestAnimationFrame(drawHiglight);
   }
-
-  console.log("ping");
 }
 
 document.getElementById('rerollButton').onmouseover = function() {
