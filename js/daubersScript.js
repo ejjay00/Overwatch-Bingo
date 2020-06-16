@@ -1,6 +1,6 @@
 $(document).ready(function() {
 // Grabs id of canvas and it's current context
-window.bingoWindow = document.getElementById("bingoCard");
+window.bingoWindow = document.getElementsByTagName("bingoWindow");
 
 // Variable for the X and Y position of the mouse
 var mouse = {x:0,y:0};
@@ -20,16 +20,16 @@ var clapping = new Audio();
 var cells = document.getElementsByClassName("cell");
     for (var i = 0; i < cells.length; i++) {
         cells[i].onclick = function(e) {
-            var x = Math.round(event.offsetX - img.width/2);
-            var y = Math.round(event.offsetY - img.height/2);
+            var x = e.offsetX - img.width/2;
+            var y = e.offsetY - img.height/2;
             var c = document.createElement("canvas");
             c.classList.add("daub");
-            c.style.left = x + "px";
-            c.style.top = y + "px";
+            c.style.left = e.clientX - x + "px";
+            c.style.top = e.clientY - y + "px";
             c.setAttribute("height", "120");
             c.setAttribute("width", "120");
             var ctx = c.getContext('2d');
-            ctx.drawImage(img,x,y);
+            ctx.drawImage(img, x, y);
             dauberStamp.play();
             e.target.appendChild(c);
             console.log("created");
@@ -74,7 +74,8 @@ $('.cell').click(function(){
             // If all 5 winner cells exist in selected array alert success message
             if(cellExists == 5) {
                 // Add what happens when you win here.
-                console.log("Good shit, Eric.");
+                console.log("Bingo!");
+                startConfetti();
             }
         }
     });
