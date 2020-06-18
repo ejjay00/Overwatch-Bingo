@@ -1,6 +1,7 @@
 //-- Special Thanks To Author: mathusummut --//
 //-- Website: https://github.com/mathusummut/confetti.js --//
 
+$document.ready(function () {
 var confetti = {
 	maxCount: 150,		//set max confetti count
 	speed: 2,			//set the particle animation speed
@@ -213,4 +214,5 @@ var confetti = {
 			}
 		}
 	}
+});
 });

@@ -10,6 +10,8 @@ img {
     margin-left: auto;
     margin-right: auto;
     display: block;
+    height: 15%;
+    width: 25%;
 }
 
 table,
@@ -53,7 +55,6 @@ tr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 #cardBtn {
@@ -73,8 +74,7 @@ tr {
 }
 
 img {
-    height: 15%;
-    width: 25%;
+
 }
 
 #banner {
@@ -156,5 +156,11 @@ td:hover {
 }
 
 .daub {
+  z-index: 5;
   position: absolute;
+}
+
+footer {
+  text-align: center;
+  font-family: overwatch;
 }

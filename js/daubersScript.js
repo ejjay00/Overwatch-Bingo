@@ -8,30 +8,30 @@ var mouse = {x:0,y:0};
 // Variable to hold current image
 var img = new Image();
 
-img.src = "img/daubers/nerfThis.png";
+img.src = "img/daubers/D.Va.png";
 
 // Variables to hold audio clips
 var dauberStamp = new Audio("audio/HeyDaddyo.ogg");
-var victory = new Audio();
 var clapping = new Audio();
 
 // On click, find specific clicked element with class name Cell, draw Dauber
 // then append as child
-var cells = document.getElementsByClassName("cell");
+var cells = document.getElementsByTagName("tbody");
     for (var i = 0; i < cells.length; i++) {
         cells[i].onclick = function(e) {
             var x = e.offsetX - img.width/2;
             var y = e.offsetY - img.height/2;
             var c = document.createElement("canvas");
+            c.width  = img.width;
+            c.height = img.height;
             c.classList.add("daub");
-            c.style.left = e.clientX - x + "px";
-            c.style.top = e.clientY - y + "px";
+            c.style.left = e.clientX - x - 60 + "px";
             c.setAttribute("height", "120");
             c.setAttribute("width", "120");
             var ctx = c.getContext('2d');
             ctx.drawImage(img, x, y);
             dauberStamp.play();
-            e.target.appendChild(c);
+            e.target.parentElement.appendChild(c);
             console.log("created");
         }
     }
@@ -58,6 +58,10 @@ var possibleWinners = winningCells.length;
 
 var selected = ['freeSpace'];
 
+var victory = new Audio("audio/victory.mp3");
+
+var bingoHit = new Boolean(false);
+
 // Toggle clicked and not clicked
 $('.cell').click(function(){
     $(this).toggleClass('clicked');
@@ -75,10 +79,15 @@ $('.cell').click(function(){
             if(cellExists == 5) {
                 // Add what happens when you win here.
                 console.log("Bingo!");
-                startConfetti();
+                confetti.start();
+                if (bingoHit == false){
+                    victory.play();
+                }
+                bingoHit = true;
             }
         }
     });
+
         // Count the number of squares clicked
         $('.cell').data('clicked', 0)
         .click(function(){
